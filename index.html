@@ -1,0 +1,71 @@
+<script>
+  // list of image names
+  const cardImages = [
+    "a_cup_of_coffee.png",
+    "a_day_at_the_beach.png",
+    "a_glass_of_water.png",
+    "a_kick_in_the_butt.png",
+    "a_sunny_day.png",
+    "apple_and_orange.png",
+    "balance.png",
+    "building_blocks.png",
+    "card_back.png",
+    "chance.png",
+    "creation.png",
+    "cupid.png",
+    "earth.png",
+    "fire.png",
+    "go.png",
+    "goldfish.png",
+    "home_sweet_home.png",
+    "ice_cream.png",
+    "night.png",
+    "rest_in_peace.png",
+    "stop.png",
+    "the_baby.png",
+    "the_bandage.png",
+    "the_bicycle.png",
+    "the_bucket___mop.png",
+    "the_cat.png",
+    "the_devil.png",
+    "the_elder.png",
+    "the_factory.png",
+    "the_handshake.png",
+    "the_hunter.png",
+    "the_jester.png",
+    "the_monster.png",
+    "the_mountains.png",
+    "the_ocean.png",
+    "the_paper_boat.png",
+    "the_piggy_bank.png",
+    "the_puppet.png",
+    "the_rag_doll.png",
+    "the_road.png",
+    "the_robot.png",
+    "the_sovereign.png",
+    "the_spigot.png",
+    "the_storm.png",
+    "the_sun.png",
+    "the_superhero.png",
+    "the_time_bomb.png",
+    "the_trash.png",
+    "the_tree.png",
+    "the_ufo.png",
+    "the_window.png",
+    "the_wizard_hat.png",
+    "yield.png",
+  ]
+  // generate a random index
+  const randomIndex = Math.floor(Math.random()*cardImages.length)
+
+  window.addEventListener('load', () => {
+    // grab the img tag
+    const imageTag = document.getElementsByTagName('img')[0]
+    // set a random source
+    imageTag.src = `images/cards/${cardImages[randomIndex]}`
+  })
+</script>
+
+<h1>Catalyst Cards</h1>
+
+<img src="images/cards/card_back.png"/>
