@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
+    <style>
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        height: 60px;
+        text-align: center;
+      }
+
+      main {
+        height: calc(100vh - 130px);
+        text-align: center;
+      }
+
+      img {
+        height: 100%;
+      }
+
+      footer {
+        padding: 10px;
+        height: 60px;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: rgb(32, 85, 142);
+        color: rgb(235, 235, 235);
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Catalyst Cards</h1>
+    </header>
+
+    <main>
+      <img src="images/cards/card_back.png"/>
+    </main>
+
+    <footer>
+      <button>New Card</button>
+    </footer>
+
+    <script type="module">
       // list of image names
       const cardImages = [
         "a_cup_of_coffee.png",
@@ -59,75 +111,25 @@
         "yield.png",
       ]
 
-      window.addEventListener('load', () => {
-        // grab the img tag
-        const imageTag = document.getElementsByTagName('img')[0]
-        // create the random image routine
-        const randomizeCard = () => {
-          // generate a random index
-          const randomIndex = Math.floor(Math.random()*cardImages.length)
-          // set a random source
-          imageTag.src = `images/cards/${cardImages[randomIndex]}`
-        }
-        // randomize now
-        randomizeCard()
-        // grab the button
-        const buttonTag = document.getElementsByTagName('button')[0]
-        // clicks randomize again
-        buttonTag.addEventListener('click', randomizeCard)
-      })
+      // grab the img tag
+      const imageTag = document.getElementsByTagName('img')[0]
+
+      // create the random image routine
+      const randomizeCard = () => {
+        // generate a random index
+        const randomIndex = Math.floor(Math.random()*cardImages.length)
+        // set a random source
+        imageTag.src = `images/cards/${cardImages[randomIndex]}`
+      }
+
+      // randomize now
+      randomizeCard()
+
+      // grab the button
+      const buttonTag = document.getElementsByTagName('button')[0]
+
+      // button clicks randomize again
+      buttonTag.addEventListener('click', randomizeCard)
     </script>
-
-    <style>
-      body {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      header {
-        height: 60px;
-        text-align: center;
-      }
-
-      main {
-        height: calc(100vh - 130px);
-        text-align: center;
-      }
-
-      img {
-        height: 100%;
-      }
-
-      footer {
-        padding: 10px;
-        height: 60px;
-        text-align: center;
-      }
-
-      button {
-        padding: 10px 20px;
-        background-color: rgb(32, 85, 142);
-        color: rgb(235, 235, 235);
-        border-radius: 10px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Catalyst Cards</h1>
-    </header>
-
-    <main>
-      <img src="images/cards/card_back.png"/>
-    </main>
-
-    <footer>
-      <button>New Card</button>
-    </footer>
   </body>
 </html>
