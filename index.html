@@ -3,11 +3,33 @@
   <head>
     <style>
       body {
+        display: flex;
+        gap: 20px;
+      }
+
+      .card-frame {
         display: grid;
         grid-template-rows: auto 1fr auto;
         height: 100vh;
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .about-frame {
+        width: 100%;
+        height: 100vh;
+        min-width: 200px;
+        /* background-color: red; */
+      }
+
+      .about-the-cards {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .about-the-creator {
+        display: flex;
+        align-items: flex-start;
       }
 
       header {
@@ -41,17 +63,58 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>Catalyst Cards</h1>
-    </header>
+    <div class="card-frame">
+      <header>
+        <h1>Catalyst Cards</h1>
+      </header>
 
-    <main>
-      <img src="images/cards/card_back.png"/>
-    </main>
+      <main>
+        <img src="images/cards/card_back.png"/>
+      </main>
 
-    <footer>
-      <button>New Card</button>
-    </footer>
+      <footer>
+        <button>New Card</button>
+      </footer>
+    </div>
+
+    <div class="about-frame">
+      <div class="title">
+        <h1><img src="https://placehold.co/400x100" alt="Catalyst Cards" /></h1>
+      </div>
+
+      <div class="about-the-cards">
+        <div class="cards-image">
+          <img src="https://placehold.co/300" alt="" />
+        </div>
+
+        <div class="cards-description">
+          <h2>Catalyst Cards</h2>
+          <h3>The Fastest Path to Deeper Dialogue</h3>
+
+          <p>Deceivingly simple, driven by science, Catalyst Cards make it easy for people to explore deep thoughts and emotions, to open up and talk about what’s truly meaningful.</p>
+
+          <p>52 hand-drawn archetypes use the power of metaphor and visual association as a gateway to the conscious and subconscious.</p>
+
+          <p>A perfect tool for ice-breakers, ideation and more, Catalyst Cards have helped companies and institutions like Microsoft, Salesforce, UPS, GE, Verizon, AARP, Georgia Tech and Emory University engage their teams and solve complex challenges</p>
+
+          <h2>How to Use Catalyst Cards</h2>
+
+          <ol>
+            <li>Deal a random Catalyst Card</li>
+            <li>Ask a provocative question.</li>
+            <li>Start the conversation!</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="about-the-creator">
+        <div class="creator-image">
+          <img src="https://placehold.co/300" alt="" />
+        </div>
+
+        <div class="creator-description"></div>
+      </div>
+    </div>
 
     <script type="module">
       // list of image names
@@ -64,7 +127,6 @@
         "apple_and_orange.png",
         "balance.png",
         "building_blocks.png",
-        "card_back.png",
         "chance.png",
         "creation.png",
         "cupid.png",
